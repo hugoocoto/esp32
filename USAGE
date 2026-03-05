@@ -5,6 +5,7 @@ Setup:
 === From the subdirectory === 
 
 Build:
+- idf.py menuconfig (optional: custom configuration)
 - idf.py set-target esp32 (esp32, esp32s3, or esp32c3)
 - idf.py build
 
