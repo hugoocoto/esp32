@@ -2,13 +2,18 @@ Setup:
 - Once per system: ./install.sh
 - Once per sesion: source ./activate.sh
 
+=== From the subdirectory === 
+
 Build:
 - idf.py set-target esp32 (esp32, esp32s3, or esp32c3)
 - idf.py build
 
-Setup environment for nvim:
+Link compile_commands for nvim (needs custom clangd lsp):
 - ln -s build/compile_commands.json .
 
 Add user to dialout:
 - If the group does not exist: sudo groupadd dialout 
 - sudo usermod -aG dialout username
+
+Flash: 
+- idf.py flash
